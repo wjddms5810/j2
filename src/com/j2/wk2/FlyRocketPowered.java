@@ -1,7 +1,7 @@
 package com.j2.wk2;
 
-public class FlyRocketPowered implements FlyBehavior{
-  public void fly() {
-    System.out.println("Flying with Rockets!");
-  }
-}
+public class FlyRocketPowered implements FlyBehavior{ 
+	public void fly() { 
+		System.out.println("Flying with Rockets!"); 
+	} 
+} 
