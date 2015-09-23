@@ -1,0 +1,26 @@
+@startuml
+Interface ISubject{
+    +registerObserver()
+    +removeObserver()
+    +notifyObservers()
+}
+Interface IObserver{
+    +update()
+}
+
+ISubject -right-> IObserver
+ISubject <|.. WeatherData
+IObserver <|.. BroadcastingCo
+WeatherData <-left- BroadcastingCo
+@enduml // class diagram
+------------------------------------------
+sequence diagram
+
+@startuml
+Client -> IObserver:obs = new()
+Client -> ISubject:registerObserver(obs)
+Client -> ISubject:setChanged()
+ISubject -> ISubject:notifyObservers()
+ISubject -> Observer:update()
+Observer -> Subject:getData()
+@enduml 
