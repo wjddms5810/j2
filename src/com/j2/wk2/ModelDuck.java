@@ -9,3 +9,4 @@ public class ModelDuck extends Duck{
 		System.out.println("I'm a mdel duck!"); 
 	} 
 }
+  
