@@ -1,4 +1,4 @@
-package com.j2.src.decorator.window;
+package com.j2.decorator.window;
   
 public abstract class WindowDecorator implements Window{
   protected Window windowDecorated;

@@ -1,0 +1,55 @@
+@startuml
+abstract class InputStream{
+    +read():abstract int
+}
+
+
+class FileInputStream{
+    +FileInputStream()
+    +read():int
+}
+    
+class StringBufferInputStream{
+    +StringBufferInputStream()
+    +read():int
+}
+class ByteArrayInputStream{
+    +ByteArrayInputStream()
+    +read():int
+}
+
+class FilterInputStream{
+    #in:InputStream 
+    +read():int
+}
+class PushbackInputStream{
+    +PushbackInputStream()
+    +read():int
+}
+class BufferedInputStream{
+    +BufferedInputStream()
+    +read():int
+}
+    
+class DataInputStream{
+    +DataInputStream()
+    +read():int
+}
+class LineNumberInputStream{
+    +LineNumberInputStream()
+    +read():int
+}
+
+InputStream <|-- FileInputStream
+InputStream <|-- StringBufferInputStream
+InputStream <|-- ByteArrayInputStream
+
+
+FilterInputStream <|-- PushbackInputStream
+FilterInputStream <|-- BufferedInputStream
+FilterInputStream <|-- DataInputStream
+FilterInputStream <|-- LineNumberInputStream
+
+InputStream <|-- FilterInputStream
+InputStream <--* FilterInputStream
+@enduml

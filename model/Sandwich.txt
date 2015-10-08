@@ -1,0 +1,64 @@
+@startuml
+abstract class Sandwich{
+    +description = "unknown sandwich": String
+    +getDescription():Stirng
+    +abstract cost():double
+    }
+class BeefSandwich{
+    +BeefSandwich()
+    +cost(): double
+    }
+class ChickenSandwich{
+    +ChickenSandwich()
+    +cost(): double
+    }
+class BaconSandwich{
+    +BaconSandwich()
+    +cost(): double
+    }
+class SeaFoodSandwich{
+    +SeaFoodSandwich()
+    +cost(): double
+    }
+abstract class CondimentDecorator{
+    #sandwich:SandWich
+    +abstract getDescription(): String
+    }
+class Cheese{
+    +Cheese()
+    +getDescription():String
+    +cost():double
+    }
+class Teriyaki{
+    +Teriyaki()
+    +getDescription():String
+    +cost():double
+    }
+class Veggie{
+    +Veggie()
+    +getDescription():String
+    +cost():double
+    }
+class Egg{
+    +Egg()
+    +getDescription():String
+    +cost():double
+    }
+class Chilli{
+    +Chilli()
+    +getDescription():String
+    +cost():double
+    }
+    
+Sandwich <|-- BeefSandwich
+Sandwich <|-- ChickenSandwich
+Sandwich <|-- BaconSandwich
+Sandwich <|-- SeaFoodSandwich
+CondimentDecorator <|-- Cheese
+CondimentDecorator <|-- Teriyaki
+CondimentDecorator <|-- Chilli
+CondimentDecorator <|-- Veggie
+CondimentDecorator <|-- Egg
+Sandwich <|-- CondimentDecorator
+Sandwich <--* CondimentDecorator
+@enduml

@@ -1,4 +1,4 @@
-package com.j2.src.decorator.window;
+package com.j2.decorator.window;
   
 public class HorizontalScrollBarDecorator extends WindowDecorator{
   public HorizontalScrollBarDecorator (Window windowDecorated){
