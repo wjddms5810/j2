@@ -27,16 +27,19 @@ public class PrinterSpooler{
 	      empty = false;
 	      printed = false;
 	    }
+	    System.out.println("->Connecting a printer");
 	  }
 	  public void disConnect(){
 		  if(!isEmpty() && isPrinted()){
 			  empty = true;
 		  }
+		  System.out.println("->Disconnecting a printer");
 	  }
 	  public void print(){
 		  if(!isEmpty()&&!isPrinted()){
 			  printed = true;
 		  }
+		  System.out.println("->Printing");
 	  }
 	  public boolean isEmpty(){
 	    return empty;
