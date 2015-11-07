@@ -1,4 +1,4 @@
-package com.j2.command.undo;
+package com.j2.command.macro;
 
 public class RemoteControlWithUndo {
 	Command[] onCommands;
@@ -12,7 +12,7 @@ public class RemoteControlWithUndo {
 		Command noCommand = new NoCommand();
 		for(int i=0;i<7;i++) {
 			onCommands[i] = noCommand;
-			offCommands[i] = noCommand; 
+			offCommands[i] = noCommand;
 		}
 		undoCommand = noCommand;
 	}
